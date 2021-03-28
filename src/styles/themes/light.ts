@@ -5,8 +5,11 @@ export default {
     background: '#fff',
     text: '#252527',
     smoke: '#bab5ba',
-    lightText: '#008ae6',
-    primary: '#8257e6'
+    lightText: '#fff',
+    lightGreen: '#e6ffe6',
+    darkGreen: '#00cc44',
+    lightRed: '#ffcccc',
+    darkRed: '#ff1a1a',
   },
 
   fonts: {

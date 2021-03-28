@@ -4,7 +4,8 @@ const theme = {
     text: '#e1e1e6',
     smoke: '#bab5ba',
     lightText: '#fff',
-    primary: '#8257e6'
+    primary: '#8257e6',
+    wrongLetter: '#ff6666',
   },
 
   fonts: {
@@ -15,7 +16,7 @@ const theme = {
   fontSizes: {
     small: "1rem",
     regular: "2rem",
-    medium: "2.2rem",
+    medium: "2.1rem",
     big: "3rem",
   },
 

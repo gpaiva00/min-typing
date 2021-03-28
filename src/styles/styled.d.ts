@@ -9,11 +9,14 @@ declare module 'styled-components' {
     title: string,
 
     colors: {
-      primary: string;
+      lightGreen: string;
+      darkGreen: string;
       background: string;
       text: string;
       smoke: string;
       lightText: string;
+      lightRed: string;
+      darkRed: string;ss
     }
 
     fonts: {

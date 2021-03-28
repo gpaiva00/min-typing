@@ -6,7 +6,10 @@ export default {
     text: '#e1e1e6',
     smoke: '#bab5ba',
     lightText: '#fff',
-    primary: '#8257e6'
+    lightGreen: '#ccffcc',
+    darkGreen: '#00cc66',
+    lightRed: '#ffb3b3',
+    darkRed: '#ff1a1a',
   },
 
   fonts: {

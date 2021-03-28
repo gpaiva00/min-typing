@@ -25,7 +25,23 @@ export const TextContainer = styled.div`
 
 export const GeneratedText = styled.p`
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.regular};
   color: ${({ theme }) => theme.colors.smoke};
   line-height: 60px;
+  letter-spacing: 3px;
+`
+
+export const untypedLetter = styled.span`
+  color: ${({ theme }) => theme.colors.smoke};
+  background: transparent;
+`
+
+export const RightLetter = styled.span`
+  background: ${({ theme }) => theme.colors.lightGreen};
+  color: ${({ theme }) => theme.colors.darkGreen};
+`
+
+export const WrongLetter = styled.span`
+  background: ${({ theme }) => theme.colors.lightRed};
+  color: ${({ theme }) => theme.colors.darkRed};
 `
