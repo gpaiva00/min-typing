@@ -14,12 +14,17 @@ declare module 'styled-components' {
       background: string;
       text: string;
       smoke: string;
+      timer: string;
       lightText: string;
+      darkText: string;
       lightRed: string;
-      darkRed: string;ss
+      darkRed: string;
+      focus: string;
     }
 
     fonts: {
+      light: string;
+      extraLight: string;
       regular: string;
       bold: string;
     },

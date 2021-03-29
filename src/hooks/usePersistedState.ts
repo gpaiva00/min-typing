@@ -6,21 +6,22 @@ type Response<T> = [
 ]
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
-  const [mounted, setMounted] = useState(false)
+  const isRendered = typeof window !== 'undefined'
+
   const [state, setState] = useState(() => {
-    if (!mounted) return initialState
 
-    const storedValue = localStorage.getItem(key)
+    if (isRendered) {
+      const storedValue = localStorage.getItem(key)
 
-    if (storedValue) setState(JSON.parse(storedValue))
+      if (storedValue) return JSON.parse(storedValue)
+    }
+
+    return initialState
   })
 
-
-
   useEffect(() => {
-    setMounted(true)
     localStorage.setItem(key, JSON.stringify(state))
-  }, [key, state])
+  }, [key, state, isRendered])
 
   return [state, setState]
 }

@@ -13,4 +13,8 @@ export default createGlobalStyle`
     font: ${props => props.theme.fonts.regular};
   }
 
+  span {
+    margin: 0;
+    padding: 0 3px;
+  }
 `

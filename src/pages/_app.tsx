@@ -1,6 +1,8 @@
 import { FC, useCallback } from 'react'
 import { AppProps } from 'next/app'
 
+import { AnimateSharedLayout } from 'framer-motion'
+
 import GlobalStyle from '../styles/global'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 
@@ -18,11 +20,13 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   }, [setTheme, theme.title]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Header setToggleTheme={toggleTheme} />
-      <Component {...pageProps} />
-      <GlobalStyle />
-  </ThemeProvider>
+    <AnimateSharedLayout>
+      <ThemeProvider theme={theme}>
+        <Header setToggleTheme={toggleTheme} />
+        <Component {...pageProps} />
+        <GlobalStyle />
+      </ThemeProvider>
+    </AnimateSharedLayout>
   )
 }
 
