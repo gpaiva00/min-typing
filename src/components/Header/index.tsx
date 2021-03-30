@@ -6,8 +6,8 @@ import { useRouter } from 'next/router'
 import themeIcon from '../../../assets/theme_icon.png';
 
 import { Container, SwitchButton, Title, ButtonIcon, OptionsContainer, Language } from './styles'
-import { i18n } from '../../../_translate/i18n';
-import usePersistedState from '../../../hooks/usePersistedState';
+import { i18n } from '../../_translate/i18n';
+import usePersistedState from '../../hooks/usePersistedState';
 
 interface HeaderProps {
   setToggleTheme(): void;

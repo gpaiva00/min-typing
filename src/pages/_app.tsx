@@ -10,7 +10,7 @@ import lightTheme from '../styles/themes/light'
 import darkTheme from '../styles/themes/dark'
 
 import usePersistedState from '../hooks/usePersistedState'
-import Header from './components/Header'
+import Header from '../components/Header'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', lightTheme);

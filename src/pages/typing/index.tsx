@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 import Quotes from '../../quotes'
 
-import { PageContainer, TextContainer, GeneratedText, RightLetter, WrongLetter, untypedLetter, Cursor, StartTyping } from './styles'
+import { PageContainer, TextContainer, GeneratedText, RightLetter, WrongLetter, untypedLetter, Cursor, StartTyping } from '../../styles/Typing.styles'
 
 let timerInterval = null
 let timer = 0

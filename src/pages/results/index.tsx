@@ -6,7 +6,7 @@ import { i18n } from '../../_translate/i18n'
 
 import { motion } from 'framer-motion'
 
-import { DataName, DataNumber, DataNumberSign, GoAgainButton, PageContainer, ResultItemContainer, ResultsDataContainer, ResultsText } from './styles'
+import { DataName, DataNumber, DataNumberSign, GoAgainButton, PageContainer, ResultItemContainer, ResultsDataContainer, ResultsText } from '../../styles/Results.styles'
 
 const Results: FC = () => {
   const router = useRouter()
