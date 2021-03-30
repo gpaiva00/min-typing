@@ -3,7 +3,7 @@ import React, { FC, useEffect, useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import themeIcon from '../../../assets/theme_icon.png';
+import themeIcon from '../../assets/theme_icon.png';
 
 import { Container, SwitchButton, Title, ButtonIcon, OptionsContainer, Language } from './styles'
 import { i18n } from '../../_translate/i18n';
