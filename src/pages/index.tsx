@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 import { i18n } from '../_translate/i18n'
 
-import { PageContainer, LetsStartText, Start } from './styles'
+import { PageContainer, LetsStartText, Start } from '../styles/Home.styles'
 
 const Home: FC = () => {
 
