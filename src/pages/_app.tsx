@@ -11,6 +11,8 @@ import darkTheme from '../styles/themes/dark'
 
 import usePersistedState from '../hooks/usePersistedState'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
+
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', lightTheme);
@@ -22,9 +24,10 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <AnimateSharedLayout>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Header setToggleTheme={toggleTheme} />
         <Component {...pageProps} />
-        <GlobalStyle />
+        <Footer />
       </ThemeProvider>
     </AnimateSharedLayout>
   )
