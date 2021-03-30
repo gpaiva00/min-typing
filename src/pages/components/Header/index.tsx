@@ -24,7 +24,7 @@ const LANGUAGES = {
   },
 }
 
-export const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
+const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   const { pt: { code: ptCode }, en: { code: enCode } } = LANGUAGES
   const router = useRouter()
 
@@ -71,4 +71,4 @@ export const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   )
 }
 
-
+export default Header
