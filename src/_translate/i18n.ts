@@ -4,6 +4,7 @@ import { translations } from './languages/'
 
 i18n.init({
     debug: false,
+    lng: 'en',
     supportedLngs: ['pt', 'en'],
     defaultNS: 'translations',
     fallbackLng: 'pt',

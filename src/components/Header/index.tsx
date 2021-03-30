@@ -46,11 +46,11 @@ const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   }
 
   useEffect(() => {
-    const languageToChange = selectedLanguage === ptCode ? enCode : ptCode
+    // const languageToChange = selectedLanguage === ptCode ? enCode : ptCode
 
-    setLanguageText(LANGUAGES[languageToChange].text)
+    // setLanguageText(LANGUAGES[languageToChange].text)
 
-    i18n.changeLanguage(selectedLanguage)
+    // i18n.changeLanguage(selectedLanguage)
   }, [])
 
 
