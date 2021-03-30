@@ -28,7 +28,7 @@ const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   const { pt: { code: ptCode }, en: { code: enCode } } = LANGUAGES
   const router = useRouter()
 
-  const [selectedLanguage, setSelectedLanguage] = usePersistedState<string>('@typingTest', ptCode)
+  const [selectedLanguage, setSelectedLanguage] = usePersistedState<string>('@typingTest', enCode)
 
   const [languageText, setLanguageText] = useState('')
 

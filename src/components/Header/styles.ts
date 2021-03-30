@@ -21,6 +21,8 @@ export const SwitchButton = styled.button`
 export const ButtonIcon = styled.img`
   width: 40px;
   filter: ${({ theme }) => theme.title === 'dark' ? `invert(60%)` : `invert(0)`};
+
+  cursor: pointer;
 `
 
 export const OptionsContainer = styled.div`
