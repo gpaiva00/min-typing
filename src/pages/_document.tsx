@@ -38,8 +38,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
 
-          {/* <link rel="favicon" href="" /> */}
-          <title>Typing Test</title>
+          <title>MinTyping</title>
         </Head>
         <body>
           <Main />

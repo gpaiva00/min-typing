@@ -38,3 +38,14 @@ export const Language = styled.p`
   margin-right: 36px;
   cursor: pointer;
 `
+
+export const TitleContainer = styled.div`
+ /* display: flex; */
+ /* align-items: flex-end; */
+`
+
+export const MinText = styled.p`
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.smoke}
+`

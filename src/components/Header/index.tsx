@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import themeIcon from '../../assets/theme_icon.png';
 
-import { Container, SwitchButton, Title, ButtonIcon, OptionsContainer, Language } from './styles'
+import { Container, SwitchButton, Title, ButtonIcon, OptionsContainer, Language, TitleContainer, MinText } from './styles'
 import { i18n } from '../../_translate/i18n';
 import usePersistedState from '../../hooks/usePersistedState';
 
@@ -57,7 +57,10 @@ const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   return (
     <Container>
       <Link href="/">
-        <Title>Typing</Title>
+        <TitleContainer>
+          <MinText>min</MinText>
+          <Title>Typing</Title>
+        </TitleContainer>
       </Link>
 
       <OptionsContainer>
