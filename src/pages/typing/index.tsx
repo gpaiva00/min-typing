@@ -32,8 +32,9 @@ const resetValues = () => {
 }
 
 const Typing: FC = () => {
-  const max = Quotes.length
-  const originalText = Quotes[getRandomInt(max)]
+  const selectedLanguage = i18n.language
+  const max = Quotes[selectedLanguage].length
+  const originalText = Quotes[selectedLanguage][getRandomInt(max)]
 
   const [generatedText, setGeneratedText] = useState<string | string[]>(originalText)
   const [showStartTyping, setShowStartTyping] = useState(true)
@@ -61,6 +62,8 @@ const Typing: FC = () => {
   }
 
   const handleKeyPress = ({ key, code }: KeyboardEvent) => {
+    console.log({ key, code});
+
     if (typedText.length === 1 && !timerInterval) {
       setShowStartTyping(false)
 
@@ -136,13 +139,12 @@ const Typing: FC = () => {
       window.removeEventListener('keypress', handleKeyPress)
       resetValues()
     }
-  }, [])
+  }, [i18n.language])
 
   return (
     <div>
         <main>
           <PageContainer>
-
             <TextContainer>
             {
               showStartTyping &&

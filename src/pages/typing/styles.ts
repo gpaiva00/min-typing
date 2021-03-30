@@ -35,7 +35,12 @@ export const RightLetter = styled.span`
 `
 
 export const WrongLetter = styled.span`
-  /* background: ${({ theme }) => theme.colors.lightRed}; */
+  background: ${({ theme }) => theme.colors.lightRed};
+  color: ${({ theme }) => theme.colors.darkRed};
+`
+
+export const WrongLetterSpace = styled.span`
+  background: ${({ theme }) => theme.colors.lightRed};
   color: ${({ theme }) => theme.colors.darkRed};
 `
 

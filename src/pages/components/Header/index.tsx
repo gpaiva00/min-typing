@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
+
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import themeIcon from '../../../assets/theme_icon.png';
 
@@ -22,40 +24,33 @@ const LANGUAGES = {
   },
 }
 
-interface DefaultLanguage {
-  selectedLanguage: string;
-}
-
 export const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
   const { pt: { code: ptCode }, en: { code: enCode } } = LANGUAGES
+  const router = useRouter()
 
   const [selectedLanguage, setSelectedLanguage] = usePersistedState<string>('@typingTest', ptCode)
 
   const [languageText, setLanguageText] = useState('')
 
-  const selectedCode = selectedLanguage === ptCode ? enCode : ptCode
-
   const handleChangeLanguage = () => {
+    const languageToChange = selectedLanguage === ptCode ? enCode : ptCode
 
+    setSelectedLanguage(languageToChange)
 
-    setSelectedLanguage(selectedCode)
+    setLanguageText(LANGUAGES[languageToChange].text)
 
-    setLanguageText(LANGUAGES[selectedLanguage].text)
+    i18n.changeLanguage(languageToChange)
 
-    console.log({ selectedCode, selectedLanguage });
-
-
-    i18n.changeLanguage(selectedCode)
-
-    window.location.reload()
+    const currentPathName = router.pathname
+    router.push(currentPathName)
   }
 
   useEffect(() => {
-    console.log({ selectedLanguage, selectedCode });
+    const languageToChange = selectedLanguage === ptCode ? enCode : ptCode
 
-    setLanguageText(LANGUAGES[selectedLanguage].text)
-    i18n.changeLanguage(selectedCode)
+    setLanguageText(LANGUAGES[languageToChange].text)
 
+    i18n.changeLanguage(selectedLanguage)
   }, [])
 
 
@@ -66,7 +61,7 @@ export const Header: FC<HeaderProps> = ({ setToggleTheme }) => {
       </Link>
 
       <OptionsContainer>
-        <Language onClick={handleChangeLanguage}>{languageText}</Language>
+        {/* <Language onClick={handleChangeLanguage}>{languageText}</Language> */}
 
         <SwitchButton onClick={setToggleTheme}>
           <ButtonIcon src={themeIcon} />
