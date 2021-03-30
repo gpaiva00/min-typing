@@ -3,6 +3,8 @@ import React, { FC, useEffect, useState, createElement } from 'react'
 
 import { useRouter } from 'next/router'
 
+import { i18n } from '../../_translate/i18n'
+
 import { motion } from 'framer-motion'
 
 import Quotes from '../../quotes'
@@ -150,7 +152,7 @@ const Typing: FC = () => {
                   exit={{ opacity: 0 }}
                   transition={{ ease: "easeInOut", duration: 1, repeat: Infinity }}
                 >
-                  <StartTyping>Start typing...</StartTyping>
+                  <StartTyping>{i18n.t('descriptions.startTyping')}</StartTyping>
                 </motion.div>
             }
               <motion.p

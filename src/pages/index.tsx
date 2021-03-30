@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 
 import { useRouter } from 'next/router'
 
+import { i18n } from '../_translate/i18n'
+
 import { PageContainer, LetsStartText, Start } from './styles'
 
 const Home: FC = () => {
@@ -20,7 +22,7 @@ const Home: FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ ease: "easeInOut", duration: 1 }}
             >
-              <LetsStartText>Do you have a minute to test your typing?</LetsStartText>
+              <LetsStartText>{i18n.t('descriptions.letsStart')}</LetsStartText>
             </motion.p>
 
             <motion.p
@@ -28,7 +30,7 @@ const Home: FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ ease: "easeInOut", duration: 1 }}
             >
-              <Start onClick={() => router.push('/typing')}>Start</Start>
+              <Start onClick={() => router.push('/typing')}>{i18n.t('buttons.start')}</Start>
             </motion.p>
           </PageContainer>
         </main>

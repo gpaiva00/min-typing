@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 
 import { useRouter } from 'next/router';
 
+import { i18n } from '../../_translate/i18n'
+
 import { motion } from 'framer-motion'
 
 import { DataName, DataNumber, DataNumberSign, GoAgainButton, PageContainer, ResultItemContainer, ResultsDataContainer, ResultsText } from './styles'
@@ -20,7 +22,7 @@ const Results: FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeIn", duration: 1 }}
       >
-        <ResultsText>Results</ResultsText>
+        <ResultsText>{i18n.t('descriptions.results')}</ResultsText>
       </motion.div>
 
       <ResultsDataContainer>
@@ -32,7 +34,7 @@ const Results: FC = () => {
       >
           <ResultItemContainer>
             <DataNumber>{wpm}</DataNumber>
-            <DataName>WPM</DataName>
+            <DataName>{i18n.t('descriptions.wpm')}</DataName>
           </ResultItemContainer>
         </motion.div>
 
@@ -43,7 +45,7 @@ const Results: FC = () => {
       >
         <ResultItemContainer>
           <DataNumber>{accuracy}<DataNumberSign>%</DataNumberSign></DataNumber>
-          <DataName>Accuracy</DataName>
+          <DataName>{i18n.t('descriptions.accuracy')}</DataName>
         </ResultItemContainer>
       </motion.div>
 
@@ -53,7 +55,7 @@ const Results: FC = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeIn", duration: 0.5, delay: 1 }}
         >
-          <GoAgainButton onClick={() => router.push('/typing')}>Go again</GoAgainButton>
+          <GoAgainButton onClick={() => router.push('/typing')}>{i18n.t('buttons.goAgain')}</GoAgainButton>
         </motion.div>
     </PageContainer>
   )
