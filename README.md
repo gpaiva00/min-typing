@@ -6,10 +6,6 @@
 Here's a minimalist typing test game
 
 ![Demo](./src/assets/demo.gif)
-
-# :page_facing_up: Table of Contents
-
-* [Getting Started](#runner-getting-started)
 # :runner: Getting Started
 
 When you download or clone this repo, enter the project folder and just run ```yarn dev```. 🎉
